@@ -1,0 +1,72 @@
+.album {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22rem;
+  height: 100%;
+  box-shadow: 2px 2px 30px rgb(124, 123, 123);
+  background-color: #773049;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  .title {
+    font-size: 1.5rem;
+    padding: 3rem 2rem;
+    color: rgb(231, 231, 231);
+    background-color: rgb(46, 46, 46);
+    margin-bottom: 20px;
+  }
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.album-song {
+  display: flex;
+  transition: background 0.5s ease;
+  padding: 1rem 2rem;
+  color: rgb(230, 230, 230);
+
+  cursor: pointer;
+  img {
+    width: 30%;
+  }
+  img:hover {
+    opacity: 0.7;
+  }
+  &:hover {
+    background-color: #793e53;
+  }
+}
+
+.song-description {
+  padding-left: 1rem;
+
+  margin: auto 0px;
+  h3 {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+}
+
+.selected {
+  h3 {
+    color: #b5fff5;
+  }
+}
+
+.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .album {
+    width: 100%;
+  }
+}
